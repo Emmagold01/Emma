@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "./components/Navbar.component";
 import { Footer } from "./components/Footer.component";
+import { DynamicBackground } from "./components/DynamicBackground";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,8 +24,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} antialiased`}>
-        <main className="relative flex min-h-screen flex-col bg-[#0F172B] text-white">
+      <body className={`${poppins.variable} antialiased bg-[#070b16]`}>
+        <main className="relative flex min-h-screen flex-col text-white">
+          {/* Dynamic dark translucent background with page-specific gradient colors */}
+          <DynamicBackground />
+
           {/* Navbar  */}
           <Navbar />
 

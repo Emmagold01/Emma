@@ -74,12 +74,15 @@ export default function Home() {
 
   return (
     <>
-      {/* ✅ Gradient Blobs & Spinning Canvases */}
-      <div className="absolute inset-0">
+      {/* ✅ Gradient Blobs, Dot Grid & Spinning Canvases */}
+      <div className="absolute inset-0 overflow-hidden">
+        {/* Subtle tech dot matrix grid */}
+        <div className="pointer-events-none absolute inset-0 z-0 bg-[radial-gradient(rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:28px_28px] opacity-50" />
+
         <Image
           src={blue}
           alt="Gradient Shape"
-          className="absolute right-[11rem] bottom-0 z-0"
+          className="absolute right-[8rem] bottom-13 z-0 md:right-[11rem] md:bottom-0"
           priority
         />
         <Image
@@ -93,19 +96,13 @@ export default function Home() {
         <CanvasImage
           src={canvas1}
           alt="canvas"
-          className="pointer-events-none absolute -top-[10%] left-[5%]"
+          className="pointer-events-none absolute -top-[14%] -left-[9%] w-[150px] md:-top-[10%] md:left-[5%] md:w-auto"
           style={{ filter: "brightness(2) contrast(0.5) opacity(0.6)" }}
         />
         <CanvasImage
           src={canvas3}
           alt="canvas"
-          className="pointer-events-none absolute -bottom-[9%] left-[22%]"
-          style={{ filter: "brightness(2) contrast(0.5) opacity(0.6)" }}
-        />
-        <CanvasImage
-          src={canvas4}
-          alt="canvas"
-          className="pointer-events-none absolute right-[6%] -bottom-[10%]"
+          className="pointer-events-none absolute -bottom-[12%] left-[11.5%] w-[150px] md:-bottom-[9%] md:left-[22%] md:w-auto"
           style={{ filter: "brightness(2) contrast(0.5) opacity(0.6)" }}
         />
         <CanvasImage
@@ -114,13 +111,19 @@ export default function Home() {
           className="pointer-events-none absolute top-[0%] right-[15%]"
           style={{ filter: "brightness(2) contrast(0.5) opacity(0.6)" }}
         />
+        <CanvasImage
+          src={canvas4}
+          alt="canvas"
+          className="pointer-events-none absolute -right-[8%] -bottom-[10%] w-[250px] md:right-[6%] md:-bottom-[10%] md:w-auto"
+          style={{ filter: "brightness(2) contrast(0.5) opacity(0.6)" }}
+        />
       </div>
 
       {/* ✅ Home Content */}
-      <div className="relative z-10 flex min-h-full flex-col items-center justify-center space-y-4 pt-40 text-center">
+      <div className="relative z-10 flex min-h-full flex-col items-center justify-center space-y-2 pt-30 text-center md:space-y-4 md:px-8 md:pt-40">
         {/* ✅ Split-text reveal for heading */}
         <motion.h1
-          className="font-roboto max-w-3xl text-[45px] leading-tight font-medium"
+          className="font-roboto max-w-[22rem] text-[28px] leading-tight font-medium md:max-w-2xl md:text-[40px] lg:max-w-3xl lg:text-[45px]"
           variants={headingContainer}
           initial="hidden"
           animate="visible"
@@ -137,7 +140,7 @@ export default function Home() {
         </motion.h1>
 
         {/* ✅ Typing effect for subheading */}
-        <p className="font-fira text-[30px] tracking-tighter text-indigo-500">
+        <p className="font-fira text-[23px] tracking-tighter text-indigo-500 md:text-[30px]">
           {typed}
           <motion.span
             aria-hidden
