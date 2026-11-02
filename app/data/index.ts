@@ -209,13 +209,13 @@ export const projects: Project[] = [
     description:
       "Shelf.Africa is a digital startup building a publishing and reading platform tailored specifically for African authors and readers",
     technologies: [
+      "Next.js",
       "Tailwind-CSS",
-      "Javascript",
-      "React",
+      "Typescript",
       "Framer",
       "Supabase",
       "Vercel",
-    ],
+    ], 
     image: shelf,
     liveUrl: "https://shelf.africa",
     year: "2026",

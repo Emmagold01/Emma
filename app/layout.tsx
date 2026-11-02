@@ -14,7 +14,7 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Emmanuel | Frontend Developer Portfolio",
   description:
-    "A modern portfolio built with Next.js, Tailwind CSS, and Framer Motion showcasing projects, skills, and creative animations for an engaging user experience.",
+    "I'm Emmanuel, a creative front-end developer who enjoys building smooth, interactive digital experiences. I focus on turning ideas into responsive layouts that not only function — but flow.",
 };
 
 export default function RootLayout({
